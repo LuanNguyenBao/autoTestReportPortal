@@ -54,7 +54,7 @@ public class DriverManager {
             default:
                 throw new Exception(String.format("Browser %s is invalid!", browserName));
         }
-        threadDriver.set(new RemoteWebDriver(new URL("http://selenium-hub:4444"), options));
+        threadDriver.set(new RemoteWebDriver(new URL("http://chrome:4444"), options));
     }
 
     public void closeDriver() {
