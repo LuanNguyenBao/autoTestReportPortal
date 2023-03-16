@@ -1,0 +1,6 @@
+#Ignore folders
+target
+.idea
+reports
+logs
+.allure
