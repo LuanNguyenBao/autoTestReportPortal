@@ -54,7 +54,7 @@ public class DriverManager {
             default:
                 throw new Exception(String.format("Browser %s is invalid!", browserName));
         }
-        threadDriver.set(new RemoteWebDriver(new URL("http://localhost:4444"), options));
+        threadDriver.set(new RemoteWebDriver(new URL("http://127.0.0.1:4444"), options));
     }
 
     public void closeDriver() {
