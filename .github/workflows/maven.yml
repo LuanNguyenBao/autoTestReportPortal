@@ -1,0 +1,21 @@
+name: docker-grid
+
+on: 
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 19
+        uses: actions/setup-java@v2
+        with:
+          java-version: '19'
+          distribution: 'adopt'
+    
+      - name: Run Test
+        if: always()
+        run: mvn clean test -D isRemote=true
+        continue-on-error: true
